@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-background {
+    @apply bg-[#121212]; /* 사용자 정의 색상 */
+  }
+  .text-primary {
+    @apply text-[#ffffff]; /* 사용자 정의 색상 */
+  }
+}
+
+body {
+  @apply bg-background text-primary;
+}
+
+h2 {
+  margin: 4px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+h3 {
+  margin: 3px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
