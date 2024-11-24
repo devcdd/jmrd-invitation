@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="png" href="/jmrd.png" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=59bb33a267ec095c647c831992ec789c&libraries=services,clusterer"
+    ></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
+            integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka" crossorigin="anonymous"></script>
+    <script>
+      Kakao.init('59bb33a267ec095c647c831992ec789c');
+
+      // SDK 초기화 여부를 판단합니다.
+      console.log(Kakao.isInitialized());
+    </script>
+    <script>
+      function shareMessage() {
+        Kakao.Share.sendDefault({
+          objectType: 'feed',
+          // profileText: 'JMRD LAST PARTY',
+          content: {
+            profileText: 'JMRD LAST PARTY',
+            title: 'JMRD LAST PARTY',
+            description: '주모르드의 마지막 파티에 여러분을 초대합니다. 꼭 참석하셔서 마지막을 함께 해주십시오!',
+            imageUrl:
+                    'https://devcdd.github.io/jmrd-invitation/jmrd.png',
+            link: {
+              // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+              mobileWebUrl: 'https://devcdd.github.io/jmrd-invitation',
+              webUrl: 'https://devcdd.github.io/jmrd-invitation',
+            },
+          },
+          buttons: [
+            {
+              title: '초대장 확인하기',
+              link: {
+                mobileWebUrl: 'https://devcdd.github.io/jmrd-invitation',
+                webUrl: 'https://devcdd.github.io/jmrd-invitation',
+              },
+            },
+          ],
+        });
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JMRD LAST PARTY</title>
+    <script type="module" crossorigin src="/assets/index-DpyShX0n.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DZ_-gY58.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
